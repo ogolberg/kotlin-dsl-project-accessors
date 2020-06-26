@@ -14,6 +14,4 @@ open class ProjectAccessorsExtension : AbstractNamedDomainObjectContainer<Projec
 }
 
 // Project extensions get typesafe accessors
-project.extensions.create<ProjectAccessorsExtension>("projects").apply {
-    this.addAll(project.rootProject.allprojects)
-}
+project.extensions.create<ProjectAccessorsExtension>("projects").addAll(project.rootProject.allprojects)
